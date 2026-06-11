@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .flexbox{
+        display: flex;
+        width: 700px;
+        height: 300px;
+    }
+    .box1{
+        flex-grow: 0;
+    }
+    .box2{
+        flex-grow: 1;
+    }
+    .box3{
+        flex-grow: 2;
+    }
+    .box4{
+        flex-grow: 1;
+    }
+    .box5{
+        flex-grow: 0;
+    }
+    .box{
+        border: 2px solid black;
+    }
+    .box11{
+        flex-shrink: 1;
+    }
+
+    .box21{
+        flex-shrink: 2;
+    }
+    .box31{
+        flex-shrink: 0;
+    }
+    .box41{
+        flex-shrink: 4;
+    }
+    .box51{
+        flex-shrink: 1;
+    }
+    .flexbox1{
+        display: flex;
+        width: 400px;
+        border:2px solid black;
+        height: 500px;
+    }
+     .flexbox2{
+        display: flex;
+        width: 500px;
+        border:2px solid black;
+        height: 500px;
+    }
+    .boxy{
+        width: 90px;
+         border: 2px solid black;
+         height: 50px;
+    }
+    .box12{
+        order: 2;
+        flex-basis: 0;
+    }
+    .box22{
+        order: 3;
+        flex-basis: auto;
+    }
+    .box32{
+        order: 1;
+        flex-basis: 200px;
+    }
+    .box42{
+        order: 5;
+        flex-basis: auto;
+    }
+    .box52{
+        order:4;
+        flex-basis: 33.33%;
+    }
+    .flexbox3{
+        display: flex;
+        width: 500px;
+        border:2px solid black;
+        height: 500px;
+        align-items: center;
+    }
+    .box33{
+        align-self: flex-end;
+    }
+</style>
+<body>
+    <h2>Flex Grow</h2>
+    <div class="flexbox">
+        <div class="box box1">box1</div>
+        <div class="box box2">box2</div>
+        <div class="box box3">box3</div>
+        <div class="box box4">box4</div>
+        <div class="box box5">box5</div>
+    </div>
+    <h2>Flex Shrink</h2>
+    <div class="flexbox1">
+        <div class="boxy box11">box1</div>
+        <div class="boxy box21">box2</div>
+        <div class="boxy box31">box3</div>
+        <div class="boxy box41">box4</div>
+        <div class="boxy box51">box5</div>
+    </div>
+    <h2>Flex-basis and Order</h2>
+    <div class="flexbox2">
+        <div class="box box12">box1</div>
+        <div class="box box22">box2</div>
+        <div class="box box32">box3</div>
+        <div class="box box42">box4</div>
+        <div class="box box52">box5</div>
+    </div>
+    <h2>Align-self</h2>
+    <div class="flexbox3">
+        <div class="box box13">box1</div>
+        <div class="box box23">box2</div>
+        <div class="box box33">box3</div>
+        <div class="box box43">box4</div>
+        <div class="box box53">box5</div>
+    </div>
+</body>
+</html>
