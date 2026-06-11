@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      *{
+        color: white;
+        font-weight: 700;
+        text-align: center;
+        box-sizing: border-box;
+      }
+      .hero {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        overflow-x: hidden;
+        background-image: url("https://picsum.photos/id/56/1000/500");
+        background-size: cover;
+        width: 99vw;
+        height: 500px;
+        border: 10px solid red;
+        box-shadow: 10px 10px 8px #c46a6a;
+      }
+      .black {
+        width: 100%;
+        height: 100%;
+        background-color: black;
+        opacity: 50%;
+        color: white;
+        text-align: center;
+        font-weight: 900;
+      }
+      nav {
+        text-align: start;
+        padding: 10px;
+        box-sizing: border-box;
+        background-color: purple;
+        color: white;
+        font-family: sans-serif;
+        font-weight: 700;
+        font-size: xx-large;
+        height: 50px;
+        border: 5px dotted gold;
+        
+      }
+      .box {
+        width: 65vw;
+        height: 500px;
+        background-image: url("https://picsum.photos/id/59/1000/500");
+        background-size: cover;
+        background-position: top;
+        color: red;
+        border: 8px double rgb(0, 255, 34);
+        box-shadow: 10px 10px rgb(133, 134, 124);
+      }
+      .box2 {
+        width: 50vw;
+        height: 500px;
+        background-image: url("https://picsum.photos/id/69/500/500");
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-color: blue;
+        color: rgb(255, 0, 0);
+        border: 5px dashed rgb(255, 0, 0);
+        box-shadow: 10px 10px 8px #aeb90b inset;
+      }
+      a {
+        color: white;
+        text-decoration: none;
+      }
+      .all {
+        background-image: url("https://picsum.photos/id/68/500/500");
+        background-attachment: fixed;
+        background-size: contain;
+      }
+      .box3 {
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(to bottom, red, yellow);
+        border: 10px solid rgb(166, 255, 0);
+        box-shadow: 5px 5px blue, 10px 10px red, 15px 15px green;
+      }
+      .box4 {
+        width: 300px;
+        height: 300px;
+        background-image: linear-gradient(
+          to bottom,
+          rgb(5, 15, 102),
+          rgb(24, 172, 115)
+        );
+        border: 10px solid rgb(255, 0, 0);
+        border-radius: 50%;
+        
+      }
+      .box5 {
+        background-image: radial-gradient(red, yellow, green);
+        width: 99vw;
+        height: 300px;
+        border-radius: 9999px;
+        border: 10px solid rgb(255, 0, 0);
+      }
+      .box6 {
+        background-image: radial-gradient(
+          rgba(255, 0, 200, 0),
+          rgb(255, 0, 0),
+          rgb(10, 12, 105)
+        );
+        box-sizing: border-box;
+        width: 99vw;
+        height: 300px;
+        border-top-right-radius: 50px;
+        border-top-left-radius: 50px;
+        border: 10px dotted yellow;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <span>GALLERY</span>
+        <a aria-current="page" href="#">Home</a>
+        <a href="#">Services</a>
+        <a href="#">Team</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
+    </header>
+    <div class="all">
+      <div class="hero">
+        <div class="black">THIS IS THE CONTENT PAGE</div>
+      </div>
+      <div class="box">
+        THIS IS A BOX WITH BACKGROUND COVER AND BORDER DOUBLE
+      </div>
+      <div class="box2">
+        THIS IS A BOX WITH BACKGROUND CONTAIN, NO BACKGROUND REPEAT AND BORDER
+        DASHED
+      </div>
+      <div class="box3">THIS IS A BOX WITH LINEAR GRADIENT BG</div>
+      <div class="box4">
+        THIS IS A BOX WITH LINEAR GRADIENT AND BORDER RADIUS 50% TO BE A CIRCLE
+      </div>
+      <div class="box5">
+        THIS IS A BOX WITH RADIAL GRADIENT AND BORDER RADIUS 9999px TO BE PILL
+        SHAPED
+      </div>
+      <div class="box6">
+        THIS IS A BOX WITH RADIAL GRADIENT AND border-top-right-radius:50px border-top-left-radius: 50px 
+      </div>
+    </div>
+  </body>
+</html>
