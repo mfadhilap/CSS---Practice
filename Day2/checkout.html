@@ -1,0 +1,269 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      h1 {
+        text-align: center;
+      }
+      .labelinput,
+      .pairedlabelinput {
+        display: flex;
+        flex-grow: 1;
+        gap: 10px;
+        /* align-items: center; */
+      }
+      .pairedlabelinput div {
+        min-width: 180px;
+      }
+      .labelinput label {
+        width: 180px;
+        font-family: sans-serif;
+      }
+      .labelinput textarea {
+        flex-grow: 1;
+      }
+      .labelinput input {
+        flex-grow: 1;
+        flex-shrink: 1;
+        min-width: 0;
+        box-sizing: border-box;
+      }
+      .contain{
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        box-sizing: border-box;
+      }
+      .contain span{
+        align-self: flex-end;
+      }
+      .contain input{
+        flex-grow: 1;
+      }
+      .labelinput input:focus {
+        border: dashed rgb(0, 110, 255);
+      }
+      .labelinput input:user-invalid {
+        border: solid rgb(255, 0, 0);
+      }
+      .labelinput input:user-invalid + span::after {
+        content: "Invalid Input";
+        color: red;
+      }
+      .labelinput select {
+        flex-grow: 1;
+      }
+      .container p {
+        padding: 0;
+        margin: 0;
+        /* align-self:flex-start; */
+      }
+      .container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        padding: 15px;
+      }
+      .asterisk {
+        color: red;
+      }
+      [type="submit"] {
+        height: 30px;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+      }
+      .cancel {
+        height: 30px;
+        border-radius: 5px;
+      }
+      .button {
+        display: flex;
+        align-self: end;
+        gap: 10px;
+      }
+      @media screen and (width <= 600px) {
+        .labelinput {
+          flex-direction: column;
+          /* align-items: flex-start;
+          justify-content: center; */
+        }
+        /* .labelinput input{
+             flex-grow: 1;
+        } */
+      }
+    </style>
+    <title>Payment Page</title>
+  </head>
+  <body>
+    <main>
+      <h1>Payment Checkout</h1>
+      <form>
+        <fieldset class="container">
+          <legend>
+            Fields marked <span class="asterisk">*</span> are required
+          </legend>
+          <fieldset>
+            <legend>Delivery Address</legend>
+            <div class="container">
+              <div class="pairedlabelinput">
+                <div class="labelinput">
+                  <label for="name-id"
+                    >Enter First Name <span class="asterisk">*</span></label
+                  >
+                  <div class="contain"><input type="text" id="name-id" required /><span></span></div>
+                </div>
+                <div class="labelinput">
+                  <label for="lastname-id"
+                    >Enter Last Name <span class="asterisk">*</span></label
+                  >
+                  <div class="contain"><input type="text" id="lastname-id" required /><span></span></div>
+                </div>
+              </div>
+              <div class="labelinput">
+                <label for="address1-id"
+                  >Enter Address Line 1 <span class="asterisk">*</span></label
+                >
+                <div class="contain"><input type="text" id="address1-id" required /><span></span></div>
+              </div>
+              <div class="labelinput">
+                <label for="address2-id">Enter Address Line 2</label>
+                <div class="contain"><input type="text" id="address2-id" /></div>
+              </div>
+              <div class="labelinput">
+                <label for="post-id"
+                  >Enter Post Code <span class="asterisk">*</span></label
+                >
+                <div class="contain"><input type="number" id="post-id" name="postcode" required /><span></span></div>
+              </div>
+              <div class="labelinput">
+                <label for="city-id"
+                  >Enter City <span class="asterisk">*</span></label
+                >
+                <div class="contain"><input type="text" id="city-id" name="city" required /><span></span></div>
+              </div>
+              <div class="labelinput">
+                <label for="country"
+                  >Choose a country <span class="asterisk">*</span></label
+                >
+                <div class="contain"><input list="country-list" id="country" name="country" required/>
+                <span></span></div>
+                <datalist id="country-list">
+                  <option value="Uganda"></option>
+                  <option value="Brazil"></option>
+                  <option value="Ghana"></option>
+                  <option value="Cuba"></option>
+                  <option value="Egypt"></option>
+                  <option value="Capde Verde"></option>
+                  <option value="Germany"></option>
+                  <option value="India"></option>
+                  <option value="Japan"></option>
+                  <option value="Luxembourg"></option>
+                  <option value="Netherlands"></option>
+                  <option value="Senegal"></option>
+                  <option value="Nigeria"></option>
+                  <option value="Romania"></option>
+                  <option value="South Africa"></option>
+                  <option value="South Korea"></option>
+                  <option value="Spain"></option>
+                  <option value="UK"></option>
+                  <option value="USA"></option>
+                  <option value="Bhutan"></option>
+                </datalist>
+              </div>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Payment Details</legend>
+            <div class="container">
+              <div class="labelinput">
+                <label for="card-id"
+                  >Enter Card Number <span class="asterisk">*</span></label
+                >
+                <div class="contain"><input
+                  type="text"
+                  pattern="[0-9]{16}"
+                  id="card-id"
+                  required
+                  maxlength="16"
+                />
+                <span></span></div>
+              </div>
+              <div class="pairedlabelinput">
+                <div class="labelinput">
+                  <label for="expirymonth-id"
+                    >Enter Expiry Month <span class="asterisk">*</span>
+                  </label>
+                  <div class="contain">
+                  <select name="month" id="expirymonth-id" required>
+                    <option value="01">January</option>
+                    <option value="02">February</option>
+                    <option value="03">March</option>
+                    <option value="04">April</option>
+                    <option value="05">May</option>
+                    <option value="06">June</option>
+                    <option value="07">July</option>
+                    <option value="08">August</option>
+                    <option value="09">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                  </select>
+                  <span></span></div>
+                </div>
+                <div class="labelinput">
+                  <label for="expiry-id"
+                    >Expiry Year <span class="asterisk">*</span>
+                  </label>
+                  <div class="contain"><input
+                    type="number"
+                    min="2026"
+                    max="2100"
+                    placeholder="YYYY"
+                    id="expiry-id"
+                    required
+                  />
+                  <span></span></div>
+                </div>
+              </div>
+              <div class="labelinput">
+                <label for="cvv-id"
+                  >Enter CVV <span class="asterisk">*</span></label
+                >
+                <div class="contain"><input
+                  aria-describedby="cvv-details"
+                  type="password"
+                  id="cvv-id"
+                  required
+                  maxlength="4"
+                />
+                <span></span></div>
+              </div>
+              <p id="cvv-details">3 or 4 digits on the back​ ​of your card</p>
+            </div>
+          </fieldset>
+          <fieldset>
+            <legend>Order Notes</legend>
+            <div class="container">
+              <div class="labelinput">
+                <label for="optional-id"> Type your Order Notes here : </label>
+                <textarea
+                  name="optionaltext"
+                  id="optional-id"
+                  placeholder="(Optional)"
+                  maxlength="500"
+                ></textarea>
+              </div>
+            </div>
+          </fieldset>
+          <div class="button">
+            <button class="cancel">cancel</button>
+            <input type="submit" />
+          </div>
+        </fieldset>
+      </form>
+    </main>
+  </body>
+</html>
