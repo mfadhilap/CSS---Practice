@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      li:nth-child(even) {
+        color: blue;
+      }
+      article p:first-child {
+        background-color: brown;
+      }
+      h2 + p {
+        color: blue;
+      }
+      .card,
+      .featured {
+        font-size: large;
+      }
+      li:last-child {
+        color: blueviolet;
+      }
+      li:nth-child(3n + 1) {
+        color: yellowgreen;
+      }
+      [type="email"] {
+        background-color: cyan;
+        margin: 5px;
+      }
+      .decor:hover {
+        background-color: deeppink;
+        border: 3px solid;
+      }
+      p::before {
+        content: "Start of the para------";
+        color: red;
+      }
+      p::after {
+        content: "To see see styling on this ::after pseudo element hover over me";
+        background-color:orangered;
+        color: white;
+      }
+      p:hover::after {
+        content: "Your are now seeing the hover styling";
+        background-color: rgb(10, 91, 241);
+        color: white;
+      }
+      .box {
+        border: 2px solid black;
+        width: 300px;
+        margin: 5px;
+      }
+      .card {
+        width: 70px;
+        text-align: center;
+        border: 2px dotted red;
+        margin: 4px;
+      }
+      [href^="https"] {
+        color: orange;
+        background-color: purple;
+      }
+      .card.featured{
+        background-color: yellow;
+      }
+      .card.featured:hover{
+        width:100px;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a aria-current="page" href="#">Home</a>
+        <a href="#cards">Cards</a>
+        <a href="#selectors">Selectors</a>
+        <a href="#pseudo">Pseudo</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+    <main>
+      <h1>CSS SELECTORS CHALLENGE</h1>
+      <div class="box" id="cards">
+        <ul>
+          <li class="card">card 1</li>
+          <li class="card">card 2</li>
+          <li class="card">card 3</li>
+          <li class="card">card 4</li>
+          <li class="card featured">card 5</li>
+          <li class="card">card 6</li>
+          <li class="card">card 7</li>
+          <li class="card">card 8</li>
+          <li class="card">card 9</li>
+          <li class="card">card 10</li>
+          <li class="card">card 11</li>
+        </ul>
+      </div>
+      <label for="emailid">Enter Email</label>
+      <input id="emailid" type="email" /> <br /><br />
+      <span class="decor"> Hover over me! </span>
+      <article id="selectors">
+        <h2>CSS SELECTORS</h2>
+        <p>
+          The CSS selectors module defines the patterns to select elements to
+          which a set of CSS rules are then applied along with their
+          specificity. The CSS selectors module provides us with more than 60
+          selectors and five combinators. Other modules provide additional
+          pseudo-class selectors and pseudo-elements.
+        </p>
+      </article>
+      <article id="pseudo">
+        <h2>CSS PSEUDO ELEMENTS</h2>
+        <p>
+          A CSS pseudo-class is a keyword added to a selector that lets you
+          select elements based on information that lies outside of the document
+          tree, such as a specific state of the selected element(s). For
+          example, the pseudo-class :hover can be used to style a button when a
+          user's pointer hovers over it.
+        </p>
+      </article>
+      <section class="contact" id="contact">
+        <h3>Contact</h3>
+        <ul>
+          <li><a href="https://github.com/Fadhil-Vonnue">Github</a></li>
+          <li>
+            <a href="mailto:mohammad.fadhil@vonnue.com">Contact me via Email</a>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
