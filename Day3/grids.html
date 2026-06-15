@@ -1,0 +1,138 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        border: 2px dotted red;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 280px), 1fr));
+        gap: 5px;
+      }
+      .container1 {
+        border: 2px dotted red;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 100px), 1fr));
+        gap: 5px;
+      }
+      .container2 {
+        border: 2px dotted red;
+        padding: 5px;
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(min(100%, 100px), 1fr));
+        gap: 5px;
+      }
+      .container3 {
+        border: 2px dotted red;
+        padding: 5px;
+        display: grid;
+        gap: 5px;
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .featured {
+        grid-column: span 2;
+        grid-row: span 2;
+      }
+      .box {
+        border: 1px solid grey;
+        background-color: blanchedalmond;
+      }
+      .b8 {
+        grid-column: auto / -1;
+      }
+      .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS GRID</h1>
+    <h2>RESPONSIVE GRID</h2>
+    <div class="container">
+      <div class="box b1">
+        <h3>PRODUCT 1</h3>
+        <img src="https://picsum.photos/id/29/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b2">
+        <h3>PRODUCT 2</h3>
+        <img src="https://picsum.photos/id/249/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b3">
+        <h3>PRODUCT 3</h3>
+        <img src="https://picsum.photos/id/79/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b4">
+        <h3>PRODUCT 4</h3>
+        <img src="https://picsum.photos/id/34/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b5">
+        <h3>PRODUCT 5</h3>
+        <img src="https://picsum.photos/id/33/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b6">
+        <h3>PRODUCT 6</h3>
+        <img src="https://picsum.photos/id/32/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b7">
+        <h3>PRODUCT 7</h3>
+        <img src="https://picsum.photos/id/31/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+      <div class="box b8">
+        <h3>PRODUCT 8</h3>
+        <img src="https://picsum.photos/id/30/300/300" alt="image of cat" />
+        <h4>DESCRIPTION</h4>
+        <p>more description</p>
+      </div>
+    </div>
+    <h2>AUTOFIT</h2>
+    <div class="container1">
+      <div class="box b1">Box 1</div>
+      <div class="box b2">Box 2</div>
+      <div class="box b3">Box 3</div>
+      <div class="box b4">Box 4</div>
+      <div class="box b5">Box 5</div>
+      <div class="box b6">Box 6</div>
+      <div class="box b7">Box 7</div>
+      <div class="box b8">Box 8</div>
+    </div>
+    <h2>AUTOFILL</h2>
+    <div class="container2">
+      <div class="box b1">Box 1</div>
+      <div class="box b2">Box 2</div>
+      <div class="box b3">Box 3</div>
+      <div class="box b4">Box 4</div>
+      <div class="box b5">Box 5</div>
+      <div class="box b6">Box 6</div>
+      <div class="box b7">Box 7</div>
+      <div class="box b8">Box 8</div>
+    </div>
+    <h2>Featured</h2>
+    <div class="container3">
+      <div class="box featured">Box 1</div>
+      <div class="box b2">Box 2</div>
+      <div class="box b3">Box 3</div>
+      <div class="box b4">Box 4</div>
+    </div>
+  </body>
+</html>
