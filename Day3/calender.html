@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            text-align: center;
+        }
+        .container{
+            display: grid;
+            grid-template-columns: repeat(8,70px);
+            gap: 1px;
+        }
+        .day1{
+            grid-column-start: 3;
+        }
+        .grids{
+            text-align: center;
+            border: 1px solid rgba(128, 128, 128, 0.568);
+            height: 30px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .today::before{
+            content: "";
+            display: inline-block;
+            width: 25px;
+            height: 25px;
+            border: 2px solid rgb(0, 255, 200); 
+            border-radius: 50%;
+            position: absolute;
+        }
+        .today{
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .event{
+            background-color: rgba(255, 0, 0, 0.425);
+        }
+        @media screen and (width<=480px) {
+            .container{
+                grid-template-columns: 1fr;
+                
+            }
+            .day1{
+                grid-column-start: auto;
+            }
+            .heading{
+                display: none;
+            }
+        }
+
+    </style>
+    <title>Calendar</title>
+</head>
+<body>
+    <h1>Calender</h1>
+    <h2>June 2026</h2>
+    <div class="container">
+        <div class="heading grids">WEEK</div>
+        <div class="heading grids">Sun</div>
+        <div class="heading grids">Mon</div>
+        <div class="heading grids">Tue</div>
+        <div class="heading grids">Wed</div>
+        <div class="heading grids">Thu</div>
+        <div class="heading grids">Fri</div>
+        <div class="heading grids">Sat</div>
+        <div class="heading grids">WEEK 1</div>
+        <div class="grids day1">1</div>
+        <div class="grids">2</div>
+        <div class="grids">3</div>
+        <div class="grids">4</div>
+        <div class="grids event">5</div>
+        <div class="grids">6</div>
+        <div class="heading grids">WEEK 2</div>
+        <div class="grids">7</div>
+        <div class="grids">8</div>
+        <div class="grids">9</div>
+        <div class="grids">10</div>
+        <div class="grids">11</div>
+        <div class="grids">12</div>
+        <div class="grids">13</div>
+        <div class="heading grids">WEEK 3</div>
+        <div class="grids">14</div>
+        <div class="grids today">15</div>
+        <div class="grids event">16</div>
+        <div class="grids">17</div>
+        <div class="grids">18</div>
+        <div class="grids">19</div>
+        <div class="grids">20</div>
+        <div class="heading grids">WEEK 4</div>
+        <div class="grids event">21</div>
+        <div class="grids">22</div>
+        <div class="grids">23</div>
+        <div class="grids">24</div>
+        <div class="grids">25</div>
+        <div class="grids">26</div>
+        <div class="grids">27</div>
+        <div class="heading grids">WEEK 5</div>
+        <div class="grids">28</div>
+        <div class="grids">29</div>
+        <div class="grids">30</div>
+    </div>
+</body>
+</html>
