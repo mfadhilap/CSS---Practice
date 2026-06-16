@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        padding: clamp(1rem, 3vw, 3rem);
+      }
+
+      h1 {
+        font-size: clamp(2.4rem, 5vw + 1rem, 5.6rem);
+      }
+      h2 {
+        font-size: clamp(2rem, 3.5vw + 1rem, 4rem);
+      }
+      h3 {
+        font-size: clamp(1.75rem, 2.5vw + 1rem, 3rem);
+      }
+      h4 {
+        font-size: clamp(1.5rem, 2vw + 1rem, 2.5rem);
+      }
+      h5 {
+        font-size: clamp(1.25rem, 1.5vw + 1rem, 2rem);
+      }
+      h6 {
+        font-size: clamp(1.1rem, 1vw + 1rem, 1.5rem);
+      }
+      .box {
+        border: 1px solid grey;
+      }
+      .containerlayout {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+      }
+      p{
+        font-size: 30px;
+      }
+      .container1 {
+        border: 1px solid grey;
+        padding: clamp(1rem, 3vw, 3rem);
+        container-type: inline-size;
+        container-name: containerda;
+      }
+      @container containerda (min-width: 500px) {
+        .containerlayout {
+          flex-direction: row;
+          /* background-color: black; */
+        }
+      }
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>HELOOOOOO</h1>
+      <h2>HELOOOOOO</h2>
+      <h3>HELOOOOOO</h3>
+      <h4>HELOOOOOO</h4>
+      <h5>HELOOOOOO</h5>
+      <h6>HELOOOOOO</h6>
+    </div>
+    <br />
+    <div class="container1">
+      <div class="containerlayout">
+        <div class="img">
+            <img src="https://picsum.photos/id/237/200/300" alt="">
+        </div>
+        <div class="desc">
+          <h2>Card name</h2>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+            deleniti nemo iste debitis blanditiis necessitatibus incidunt esse
+            vitae tenetur iusto. Neque, voluptas quibusdam praesentium
+            consequatur repellat, vero iure veritatis est ad vitae sunt
+            inventore earum deserunt. Dicta sint, vitae amet doloremque magnam
+            eveniet dolorem quisquam distinctio rerum suscipit unde. Illo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
