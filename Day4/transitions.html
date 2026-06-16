@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .container {
+        padding: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        width: 600px;
+        height: 850px;
+        border: 1px solid grey;
+        transition-property:all ;
+      }
+      .img, .para, .title, .but{
+        opacity: 0;
+      }
+      .container:hover .img{
+        opacity: 100;
+        transition-delay: 300ms;
+        transition-duration: 300ms;
+        transition-timing-function:ease-in;
+      }
+      .container:hover .title{
+        opacity: 100;
+        transition-delay: 300ms;
+        transition-duration: 300ms;
+        transition-timing-function:ease-in;
+      }
+      .container:hover .para{
+        opacity: 100;
+        transition-delay: 350ms;
+        transition-duration: 300ms;
+        transition-timing-function:ease-in;
+      }
+      .container:hover .but{
+        opacity: 100;
+        transition-delay: 400ms;
+        transition-duration: 300ms;
+        transition-timing-function:ease-in;
+      }
+
+      p {
+        font-size: 30px;
+      }
+      /* .container:hover .desc{
+        flex-direction: column;
+      } */
+      .container:hover .desc h1{
+        transition-delay: 300ms;
+      }
+      .container:hover .desc p{
+        transition-delay: 350ms;
+      }
+      .container:hover .desc button{
+        transition-delay: 2s;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background: red;
+        transition: width 2s;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .boxes{
+        width: 500px;
+        border: 1px solid black;
+      }
+      .box1{
+        transition-timing-function: linear;
+      }
+      .box2{
+        transition-timing-function: ease;
+      }
+      .box3{
+        transition-timing-function: ease-in;
+      }
+      .box4{
+        transition-timing-function: ease-out;
+      }
+      .box5{
+        transition-timing-function: ease-in-out;
+      }
+      .box:hover{
+        width: 500px;
+      }
+      .touch{
+        padding: 10px;
+        margin: 10px;
+        transition: transform 2s;
+      }
+      .touch:hover{
+        background-color: green;
+        color: white;
+      }
+      .touch:hover{
+        transform:translateY(60px);
+        transition-timing-function:cubic-bezier(0, 2.01, 1,-1.54)
+      }
+      .focusring{
+        width: 200px;
+        height: 50px;
+        border: 4px solid rgb(255, 0, 0);
+        border-radius: 999px;
+        transition-property:all ;
+      }
+      .focusring:focus{
+        transition-duration:300ms ;
+        transition-delay: 300ms;
+        width: 400px;
+        border: 10px solid black;
+        background-color: cyan;
+      }
+
+    </style>
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>CSS TRANSITION</h1>
+    <h2>BOX TRANSITION</h2>
+    <div class="boxes">
+    <div class="box box1">box</div>
+    <br>
+    <div class="box box2">box</div>
+    <br>
+    <div class="box box3">box</div>
+    <br>
+    <div class="box box4">box</div>
+    <br>
+    <div class="box box5">box</div>
+    </div>
+    <br>
+    <h2>BUTTON BOUNCE</h2>
+    <button class="touch">Hover over me</button>
+    <br><br><br><br><br>
+    <h2>CARD TRANSITION</h2>
+    <div class="container">
+      <div class="img">
+        <img src="https://picsum.photos/id/237/600/300" alt="" />
+      </div>
+        <h1 class="title">Card name</h1>
+        <hr />
+        <p class="para">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora
+          deleniti nemo iste debitis blanditiis necessitatibus incidunt esse
+          vitae tenetur iusto. Neque, voluptas quibusdam praesentium consequatur
+          repellat, vero iure veritatis est ad vitae sunt inventore earum
+          deserunt. Dicta sint, vitae amet doloremque magnam eveniet dolorem
+          quisquam distinctio rerum suscipit unde. Illo.
+        </p>
+        <button class="but">Add to cart</button>
+      </div>
+    </div>
+    <br><br>
+    <h2>FOCUS RING</h2>
+    <input class="focusring" type="text">
+  </body>
+</html>
