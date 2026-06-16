@@ -1,0 +1,36 @@
+:root{
+--color-primary:purple;
+--color-primary-rgb:rgb(128, 0, 128);
+--color-primary-hsl:hsl(300, 100%, 25%);
+--color-primary-hex:#800080;
+--color-primary-oklch:oklch(42.09% 0.19352 328.352);
+--color-secondary:blue;
+--color-accent:yellow ;
+--color-success: green;
+--color-warning:orange ; 
+--color-error: red;
+--color-text: black;
+--color-bg:rgb(255, 255, 255);
+--color-purple-100:oklch(94.3% 0.029 294.588);
+--color-purple-100:oklch(90.2% 0.063 306.703);
+--color-purple-100:oklch(82.7% 0.119 306.383);
+--color-purple-100:oklch(74% 0.238 322.16);
+--color-purple-100:oklch(66.7% 0.295 322.15);
+}
+
+:root[data-theme="dark"]{
+    --color-text: rgb(255, 255, 255);
+    --color-bg:rgb(0, 0, 0);
+}
+
+*{
+    background-color: var(--color-bg);
+    color: var(--color-text);
+}
+
+h1{
+    color: var(--color-secondary);
+}
+h2{
+    color:var(--color-primary)
+}
