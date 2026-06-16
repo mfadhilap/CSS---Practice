@@ -32,7 +32,7 @@
       .containerlayout {
         display: flex;
         flex-direction: column;
-        gap: 15px;
+        gap: clamp(1rem, 3vw, 3rem);
       }
       p{
         font-size: 30px;
@@ -41,9 +41,9 @@
         border: 1px solid grey;
         padding: clamp(1rem, 3vw, 3rem);
         container-type: inline-size;
-        container-name: containerda;
+        container-name: containermain;
       }
-      @container containerda (min-width: 500px) {
+      @container containermain (min-width: 500px) {
         .containerlayout {
           flex-direction: row;
         }
