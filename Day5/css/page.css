@@ -1,10 +1,13 @@
 @media screen and (width<=768px) {
-    .cards,.homegrid{
+    .homegrid{
         grid-template-columns: repeat(2,1fr);
+    }
+    .cards{
+        grid-template-columns: 1fr
     }
 }
 @media screen and (width<=460px) {
-    .cards,.homegrid{
+    .homegrid{
         grid-template-columns: 1fr
     }
 }
