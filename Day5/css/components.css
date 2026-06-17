@@ -1,11 +1,31 @@
 header h1 {
   color: blanchedalmond;
 }
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+}
 .feature {
   display: flex;
   flex-direction: column;
   gap: 10px;
   padding: 5px;
+}
+.article{
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+a:hover, a:focus-visible{
+    color: yellow !important; 
+}
+button:hover, button:focus-visible{
+    background-color: rgb(33, 124, 21) !important; 
+    color: white !important;
 }
 .testimonial {
   border: 1px solid black;
@@ -14,12 +34,13 @@ header h1 {
 footer .footer {
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 footer .footer .content {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  width: 350px;
+  width: 300px;
   padding: 0 50px;
 }
 footer .footer .socials button {
@@ -100,11 +121,15 @@ dl dd {
 ul {
   list-style-type: none;
 }
+li{
+  margin: 5px 0px;
+}
 .card {
   display: flex;
   flex-direction: column;
   padding: 10px;
   gap: 20px;
+  min-width: 0px;
   border: 2px solid rgba(128, 128, 128, 0.479);
   box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
   transition: transform 100ms ease;
@@ -199,10 +224,14 @@ th:nth-child(5) {
   align-items: center;
   padding: 10px;
 }
+.selection a{
+    color: white;
+    text-decoration: none;
+}
 .card:hover .socials {
   opacity: 100;
 }
-section {
+#leadership,#executive {
   display: none;
 }
 #executive:target {
@@ -280,10 +309,10 @@ textarea {
   opacity: 0;
   width: 60px;
 }
-.checkbx [type="checkbox"]:checked ~ label::after {
+[type="checkbox"]:checked ~ label::after {
   left: 20px;
 }
-.checkbx [type="checkbox"]:checked ~ label::before {
+[type="checkbox"]:checked ~ label::before {
   background-color: lightskyblue;
 }
 select {
@@ -318,6 +347,9 @@ option {
   padding: 10px;
   transition: 0.4s;
   border-radius: 10px;
+}
+input:focus,input:hover{
+    background-color: lightblue;
 }
 input:user-invalid {
   border: solid rgb(255, 0, 0);
