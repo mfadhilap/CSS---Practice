@@ -1,0 +1,20 @@
+@media print{
+    .links[href]::after{
+        content: ' (' attr(href) ')' 
+    }
+    nav,button,.sidebar,.ads,form,video{
+        display: none !important;
+    }
+    h1,h2,h3,h4,h5,h6{
+        page-break-inside: avoid;
+    }
+    *{
+        animation: none !important;
+        transition: none !important;
+    }
+    .collapse,.accordion,.panel{
+        max-height: 600px !important;
+        display: block !important;
+    }
+    
+}
