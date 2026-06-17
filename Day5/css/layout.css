@@ -2,7 +2,7 @@ header {
   padding: 10px;
   background-color: navy;
   position: sticky;
-  width: 100vw;
+  width: 100%;
   top: 0;
   box-sizing: border-box;
   z-index: 1000;
@@ -45,7 +45,7 @@ footer {
   margin-top: auto;
   margin-top: auto;
   min-height: 20vh;
-  width: 100vw;
+  width: 100%;
   background-color: rgb(32, 38, 62);
   box-sizing: border-box;
   padding: 0 15vw;
@@ -58,4 +58,9 @@ footer {
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 5px;
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
 }

@@ -97,8 +97,8 @@ dl dd {
   padding: 13px;
   margin: 0 13px 13px 0;
 }
-ul{
-    list-style-type: none; 
+ul {
+  list-style-type: none;
 }
 .card {
   display: flex;
@@ -106,8 +106,8 @@ ul{
   padding: 10px;
   gap: 20px;
   border: 2px solid rgba(128, 128, 128, 0.479);
-  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.05);
-  transition: transform 100ms ease-in;
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 100ms ease;
 }
 .card:hover {
   border: 2px solid var(--color-accent);
@@ -127,8 +127,9 @@ ul{
   align-items: center;
   padding: 10px;
 }
-td, th{
-    padding: 10px;
+td,
+th {
+  padding: 10px;
 }
 tr:nth-child(even) {
   background-color: #f2f2f2;
@@ -136,16 +137,18 @@ tr:nth-child(even) {
 table {
   border: 2px solid black;
 }
-td,th{
-    border: solid;
+td,
+th {
+  border: solid;
 }
-tbody tr:first-child th{
-    position: sticky;
-    top:85px;
-    z-index: 500;
-    background-color: white;
+tbody tr:first-child th {
+  position: sticky;
+  top: 85px;
+  z-index: 500;
+  background-color: white;
 }
-.featured,th:nth-child(5) {
+.featured,
+th:nth-child(5) {
   background-color: rgb(15, 161, 15) !important;
 }
 .cta {
@@ -165,4 +168,166 @@ tbody tr:first-child th{
   border-radius: 10px;
   padding: 10px 10px;
   width: 120px;
+}
+.card img {
+  border-radius: 50%;
+}
+
+.card .socials {
+  display: flex;
+  gap: 5px;
+  width: 35px;
+  flex-direction: row;
+  margin-top: auto;
+  border: 0px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.card .socials button {
+  border-radius: 50%;
+  width: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.selection {
+  display: flex;
+  gap: 15px;
+  background-color: rgb(8, 8, 95);
+  color: white;
+  height: 4vh;
+  align-items: center;
+  padding: 10px;
+}
+.card:hover .socials {
+  opacity: 100;
+}
+section {
+  display: none;
+}
+#executive:target {
+  display: block;
+}
+#leadership:target {
+  display: block;
+}
+.field {
+  position: relative;
+  margin: 45px auto;
+}
+
+.field input,
+textarea {
+  font-size: 18px;
+  padding: 10px;
+}
+
+.field label {
+  font-size: 18px;
+  font-weight: normal;
+  position: absolute;
+  left: 10px;
+  top: 13px;
+  transition: 0.2s ease all;
+}
+
+.field input:focus ~ label,
+.field textarea:focus ~ label,
+.field input:valid ~ label,
+.field form:focus ~ label {
+  top: -20px;
+  font-size: 14px;
+}
+
+[type="submit"] {
+  padding: 10px;
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+}
+[type="checkbox"] ~ label::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 50px;
+  height: 30px;
+  border-radius: 999px;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(0, 0, 0);
+}
+[type="checkbox"] ~ label::after {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: "";
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: black;
+  border: 1px solid rgb(0, 0, 0);
+  transition: all 0.2s ease;
+}
+.checkbx {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 30px;
+}
+[type="checkbox"] {
+  opacity: 0;
+  width: 60px;
+}
+.checkbx [type="checkbox"]:checked ~ label::after {
+  left: 20px;
+}
+.checkbx [type="checkbox"]:checked ~ label::before {
+  background-color: lightskyblue;
+}
+select {
+  border: 2px solid #dddddd;
+  background: #eeeeee;
+  padding: 10px;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+select,
+::picker(select) {
+  appearance: base-select;
+}
+select:hover,
+select:focus {
+  background: #dddddd;
+}
+select::picker-icon {
+  color: #666666;
+  transition: 0.4s rotate;
+}
+select:open::picker-icon {
+  rotate: 180deg;
+}
+option {
+  display: flex;
+  justify-content: flex-start;
+  gap: 20px;
+  color: white;
+  border: 2px solid #dddddd;
+  background: #1d1d1d;
+  padding: 10px;
+  transition: 0.4s;
+  border-radius: 10px;
+}
+input:user-invalid {
+  border: solid rgb(255, 0, 0);
+}
+input:user-valid, select:user-valid {
+  border: solid green;
+}
+select:user-invalid {
+  border: solid rgb(255, 0, 0);
+}
+iframe {
+  border-radius: 50%;
 }
