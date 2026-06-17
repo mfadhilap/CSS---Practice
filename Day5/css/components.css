@@ -1,0 +1,114 @@
+header h1{
+    color: blanchedalmond;
+}
+.feature {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 5px;
+}
+.testimonial {
+  border: 1px solid black;
+  padding: 10px;
+}
+footer .footer {
+  display: flex;
+  justify-content: space-between;
+}
+footer .footer .content {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 350px;
+  padding: 0 50px;
+}
+footer .footer .socials button {
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+footer .footer .socials {
+  display: flex;
+  gap: 5px;
+}
+footer .footer {
+  border-bottom: 1px solid grey;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+footer a {
+  color: white;
+  text-decoration: none;
+}
+footer .copyright {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 40px;
+  text-align: center;
+}
+dl {
+  margin-left: 10px;
+}
+dl dt::before {
+  content: "";
+  width: 1px;
+  height: 10px;
+  border: solid;
+  margin-right: 10px;
+}
+dl dd::before {
+  content: "";
+  height: 30px;
+  border: solid;
+  margin-right: 50px;
+}
+dl {
+  position: relative;
+  margin: 20px;
+}
+dl dt::after {
+  position: absolute;
+  left: 18px;
+  display: inline-block;
+  content: "";
+  width: 10px;
+  height: 10px;
+  border: 1px solid black;
+  border-radius: 50%;
+  background-color: black;
+}
+dl dt {
+  padding: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+dl dd {
+  width: auto;
+  padding: 0 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+}
+.pullquote {
+    text-align: center;
+    background: #ddf;
+    font-weight: bold;
+    padding: 13px;
+    margin: 0 13px 13px 0;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 20px;
+    border: 2px solid rgba(128, 128, 128, 0.479);
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.05);
+}
+.content{
+    display: flex;
+    flex-direction: column;
+    gap: 10px; 
+    padding: 10px 0;
+    font-size: 20px;
+}
