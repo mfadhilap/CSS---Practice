@@ -1,3 +1,11 @@
+body {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  min-height: 100dvh; 
+}
+
 header {
   padding: 10px;
   background-color: navy;
@@ -7,18 +15,21 @@ header {
   box-sizing: border-box;
   z-index: 1000;
 }
+
 header a {
   color: white;
 }
-main{
-    padding: 10px;
-    box-sizing: border-box;
+
+main {
+  padding: 10px;
+  box-sizing: border-box;
 }
+
 .hero {
   width: 100%;
   background-image:
-    linear-gradient(rgba(36, 36, 126, 0.5) 0%, rgba(53, 48, 48, 0.5) 100%),
-    url(https://picsum.photos/id/1/1900/600);
+    linear-gradient(rgb(36 36 126 / 50%) 0%, rgb(53 48 48 / 50%) 100%),
+    url("https://picsum.photos/id/1/1900/600");
   background-size: cover;
   height: 50vh;
   display: flex;
@@ -26,6 +37,7 @@ main{
   align-items: center;
   position: relative;
 }
+
 .homegrid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -36,22 +48,23 @@ main{
 footer {
   font-family: sans-serif;
   margin-top: auto;
-  margin-top: auto;
   min-height: 20vh;
   width: 100%;
-  background-color: rgb(32, 38, 62);
+  background-color: rgb(32 38 62);
   box-sizing: border-box;
   padding: 0 15vw;
   padding-top: 5vh;
   color: white;
 }
-.cards{
-    box-sizing: border-box;
-    padding: 10px;
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap: 5px;
+
+.cards {
+  box-sizing: border-box;
+  padding: 10px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 5px;
 }
+
 .container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);

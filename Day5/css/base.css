@@ -18,6 +18,7 @@
   --color-purple-400: oklch(74% 0.238 322.16deg);
   --color-purple-500: oklch(66.7% 0.295 322.15deg);
 }
+
 *,
 *::before,
 *::after {
@@ -25,6 +26,7 @@
   margin: 0;
   padding: 0;
 }
+
 :root[data-theme="dark"] {
   --color-text: rgb(255 255 255);
   --color-bg: #171717;
