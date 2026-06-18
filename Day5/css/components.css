@@ -31,12 +31,26 @@ footer a {
 
 a:hover,
 a:focus-visible {
+  border-radius: 10px;
+  padding: 5px;
+  color: yellow;
+  background-color: #000080;
+}
+
+.selection a {
+  color: white;
+  text-decoration: none;
+}
+
+header a:hover,
+header a:focus-visible {
+  padding: 0;
   color: yellow !important;
 }
 
 button:hover,
 button:focus-visible {
-  background-color: rgb(33 124 21) !important;
+  background-color: #217c15 !important;
   color: white !important;
 }
 
@@ -210,7 +224,7 @@ table {
 
 .featured,
 th:nth-child(5) {
-  background-color: rgb(15 161 15) !important;
+  background-color: #0fb80f !important;
 }
 
 tbody tr:first-child th {
@@ -252,11 +266,6 @@ tbody tr:first-child th {
   height: 4vh;
   align-items: center;
   padding: 10px;
-}
-
-.selection a {
-  color: white;
-  text-decoration: none;
 }
 
 .card:hover .socials {
@@ -398,8 +407,15 @@ option {
 }
 
 input:focus,
-input:hover {
+input:hover,
+textarea:focus,
+textarea:hover {
   background-color: lightblue;
+}
+
+[type="submit"]:focus,
+[type="submit"]:hover {
+  background-color: #0fb80f !important;
 }
 
 input:user-invalid {
