@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        [type="checkbox"]{
+            appearance: none;
+        }
+        [type="checkbox"]:checked + label::before{
+            background-color: rgb(16, 146, 252);
+            color: white;
+            text-align: center;
+        }
+        [for="checkbx"]::before{
+            display: inline-block;
+            width: 10px;
+            height: 10px;
+            content: " ";
+            border: 0.4px solid black;
+        }
+        a{
+            color: rgb(255, 255, 255);
+        text-decoration: none;
+        font-weight: 700;
+        }
+        a:hover{
+            background-color: yellow;
+        }
+        a:focus-visible{
+            background-color: rgb(255, 0, 0);
+        }
+        body{
+            counter-reset: list;
+        }
+        li::before{
+            counter-increment: list;
+            content: "List " counter(list) ": ";
+        }
+        nav{
+            background-color: blueviolet;
+            height: 30px;
+            box-sizing: border-box;
+            padding: 6px;
+        }
+        .tooltip{
+            position: relative;
+        }
+        .tooltip:hover::after{
+            padding: 2px;
+            border-radius: 2px;
+            display: inline-block;
+            position: absolute;
+            background-color: black;
+            color: white;
+            content: attr(data-tooltip);
+            left: 0px;
+            top: 15px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>PSEUDO</h1>
+   
+    <nav>
+        <a aria-current="page" href="#">Home</a>
+        <a href="#checkbx">Checkbox</a>
+        <a href="#counter">Counter</a>
+        <a href="#tooltip">Tooltip</a>
+      </nav>
+       </header>
+    <main>
+        <h2>Checkbox</h2>
+    <input id="checkbx" class="checkbx" type="checkbox">
+    <label for="checkbx">  Remember ME</label>
+    <h2>Counter</h2>
+    <ol id="counter">
+        <li>Para</li>
+        <li>Para</li>
+        <li>Para</li>
+        <li>Para</li>
+        <li>Para</li>
+    </ol>
+    <h2>Tooltip</h2>
+    <div id="tooltip" class="tooltip" data-tooltip="THIS IS A TOOLTIP TEXT">Hover over me</div>
+    </main>
+</body>
+</html>
